@@ -14,7 +14,8 @@ config=$(cat <<CONDARC
 
 channels:
  - conda-forge
-
+ - conda-team
+ - conda-team/label/dev
  - defaults # As we need conda-build
 
 conda-build:
@@ -40,7 +41,7 @@ echo "$config" > ~/.condarc
 conda clean --lock
 
 conda update --yes --all
-conda install --yes conda-build==1.18.2
+conda install --yes conda-build
 conda info
 
 # Embarking on 3 case(s).
