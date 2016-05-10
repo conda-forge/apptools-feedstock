@@ -40,7 +40,11 @@ echo "$config" > ~/.condarc
 conda clean --lock
 
 conda update --yes --all
-conda install --yes conda-build==1.18.2
+git clone https://github.com/msarahan/conda-build
+pushd conda-build
+git checkout fix_locks
+python setup.py install
+popd
 conda info
 
 # Embarking on 3 case(s).

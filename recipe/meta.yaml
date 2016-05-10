@@ -11,7 +11,8 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: set PATH && python setup.py install --single-version-externally-managed --record record.txt
+  skip: True  # [unix]
 
 requirements:
   build:
