@@ -10,8 +10,7 @@ source:
   md5: cf122251faec4d3dff0a9480d6f6f9f7
 
 build:
-  noarch: python
-  number: 1
+  number: 2
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -33,11 +32,14 @@ requirements:
 test:
   imports:
     - apptools
+    # the following import will fail on Python 3 if 2to3 wasn't run
+    - apptools.logger.api
 
 about:
   home: http://docs.enthought.com/apptools/
   license: BSD 3-clause
   summary: application tools
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
