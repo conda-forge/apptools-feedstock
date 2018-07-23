@@ -37,6 +37,7 @@ about:
   home: http://docs.enthought.com/apptools/
   license: BSD 3-clause
   summary: application tools
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
