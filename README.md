@@ -14,8 +14,9 @@ Summary: application tools
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/apptools-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/apptools-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/apptools-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/apptools-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/apptools-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/apptools-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/apptools-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/apptools-feedstock/branch/master)
 
 Current release info
 ====================
