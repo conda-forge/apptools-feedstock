@@ -10,7 +10,7 @@ source:
   md5: cf122251faec4d3dff0a9480d6f6f9f7
 
 build:
-  number: 2
+  number: 1002
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
