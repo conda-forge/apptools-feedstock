@@ -10,6 +10,7 @@ source:
   sha256: 260ae0e2a86cb2df2fede631ab6ac8ece694a58a1def78cd015c890c57140582
 
 build:
+  noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -32,7 +33,6 @@ requirements:
 test:
   imports:
     - apptools
-    # the following import will fail on Python 3 if 2to3 wasn't run
     - apptools.logger.api
 
 about:
