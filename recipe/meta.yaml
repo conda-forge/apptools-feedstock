@@ -1,16 +1,17 @@
-{% set version = "4.4.0" %}
+{% set version = "4.5.0" %}
 
 package:
   name: apptools
   version: {{ version }}
 
 source:
-  fn: apptools-{{ version }}.tar.bz2
-  url: https://pypi.python.org/packages/source/a/apptools/apptools-{{ version }}.tar.bz2
-  md5: cf122251faec4d3dff0a9480d6f6f9f7
+  fn: apptools-{{ version }}.tar.gz
+  url: https://pypi.python.org/packages/source/a/apptools/apptools-{{ version }}.tar.gz
+  sha256: 260ae0e2a86cb2df2fede631ab6ac8ece694a58a1def78cd015c890c57140582
 
 build:
-  number: 1002
+  noarch: python
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -32,7 +33,6 @@ requirements:
 test:
   imports:
     - apptools
-    # the following import will fail on Python 3 if 2to3 wasn't run
     - apptools.logger.api
 
 about:
