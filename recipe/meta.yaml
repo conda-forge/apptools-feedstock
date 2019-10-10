@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: apptools-{{ version }}.tar.bz2
-  url: https://pypi.python.org/packages/source/a/apptools/apptools-{{ version }}.tar.bz2
+  fn: apptools-{{ version }}.tar.gz
+  url: https://pypi.python.org/packages/source/a/apptools/apptools-{{ version }}.tar.gz
   sha256: 260ae0e2a86cb2df2fede631ab6ac8ece694a58a1def78cd015c890c57140582
 
 build:
