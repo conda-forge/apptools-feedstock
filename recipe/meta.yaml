@@ -1,4 +1,4 @@
-{% set version = "5.1.0" %}
+{% set version = "5.3.0" %}
 
 package:
   name: apptools
@@ -7,7 +7,7 @@ package:
 source:
   fn: apptools-{{ version }}.tar.gz
   url: https://pypi.python.org/packages/source/a/apptools/apptools-{{ version }}.tar.gz
-  sha256: d093de314f04485a4c108ba3806c514ae3ba39a3210277fef297521634a3a58b
+  sha256: 30580bf62a0d5dd616edd5e2b9958227633f35cb557c6860452a56809e6bd567
 
 build:
   noarch: python
