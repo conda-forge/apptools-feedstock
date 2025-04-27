@@ -1,31 +1,28 @@
-{% set version = "5.1.0" %}
+{% set name = "apptools" %}
+{% set version = "5.3.0" %}
 
 package:
-  name: apptools
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: apptools-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/a/apptools/apptools-{{ version }}.tar.gz
-  sha256: d093de314f04485a4c108ba3806c514ae3ba39a3210277fef297521634a3a58b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apptools-{{ version }}.tar.gz
+  sha256: 30580bf62a0d5dd616edd5e2b9958227633f35cb557c6860452a56809e6bd567
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - pip
-    - python
+    - python {{ python_min }}
     - setuptools
-    - traits
-    - pyface
-    - traitsui
-    - configobj
+    - wheel
+    - pip
   run:
-    - python
-    - traits
+    - python >={{ python_min }}
+    - traits >=6.2.0
     - pyface
     - traitsui
     - configobj
@@ -34,13 +31,19 @@ test:
   imports:
     - apptools
     - apptools.logger.api
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
-  home: http://docs.enthought.com/apptools/
-  license: BSD-3-Clause
+  home: https://docs.enthought.com/apptools
   summary: application tools
+  license: BSD-3-Clause
   license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
     - grlee77
+    - JaRoSchm
